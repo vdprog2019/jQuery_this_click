@@ -77,8 +77,32 @@
           //$("#kryg").click(function(){$("#kv").click();});
           
          // $("div").click(function(){alert("hi");});
+          //поменять цвет фона элемента по которому кликнули
+          //$("div").click(function(){$(this).css("background-color","blue");});
           
-          $("div").click(function(){$(this).css("background-color","blue");});
+          //поменять цвет фона элемента в котором распологается элемент по которому кликнули
+         //$("div").click(function(){$(this).parent().css("background-color","blue");});
+          
+          //поменятся цветом с родителем
+      /*  $("div").click(function(){
+            var click_element =  $(this);
+            var click_color = $(this).css("background-color");
+            var parent_element = $(this).parent();
+            var parent_color = $(this).parent().css("background-color");
+
+            click_element.css("background-color",  parent_color);
+            parent_element.css("background-color", click_color);
+        });
+          */
+          
+          //оптимизация
+            $("div").click(function(){
+                while(true){
+                var tmp = $(this).css("background-color");
+                $(this).css("background-color", $(this).parent().css("background-color"));
+                $(this).parent().css("background-color", tmp);
+                }
+            });
         </script>
     </body>
     
