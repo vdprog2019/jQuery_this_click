@@ -97,11 +97,10 @@
           
           //оптимизация
             $("div").click(function(){
-                while(true){
                 var tmp = $(this).css("background-color");
                 $(this).css("background-color", $(this).parent().css("background-color"));
                 $(this).parent().css("background-color", tmp);
-                }
+
             });
         </script>
     </body>
