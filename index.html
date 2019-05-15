@@ -1,0 +1,85 @@
+<html>
+
+    <head>
+       <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        
+        <style>
+            div{
+                display: flex;
+                margin: auto;
+                justify-content: center;
+                width: 70%;
+                height: 70%;
+            }
+
+            #kv{
+                background-color: red;
+            }
+
+            #kv2{
+                background-color: yellow;
+             
+                
+            }
+            
+            #kv3{
+                background-color: green;
+              
+            }
+            
+            #kv4{
+                background-color: black;
+               
+                
+            }
+
+            #kv5{
+                background-color: palevioletred;
+               
+            }
+            
+            #kv6{
+                background-color: white;
+               
+                
+            }
+        </style>
+    
+          
+    </head>
+    
+    
+    <body>
+       
+        
+        
+        
+        
+        <div id="kv">
+            <div id="kv2">
+                <div id="kv3">
+                    <div id="kv4">
+                        <div id="kv5">
+                            <div id="kv6">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+      <script>
+          //обработчик клика
+          //$("#kv").click(function(){alert("квадрата клик");});
+          //вызов обработчика другого элемента
+          //$("#kryg").click(function(){$("#kv").click();});
+          
+         // $("div").click(function(){alert("hi");});
+          
+          $("div").click(function(){$(this).css("background-color","blue");});
+        </script>
+    </body>
+    
+</html>
